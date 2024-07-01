@@ -15,7 +15,7 @@ BASHRC_FILE="$HOME/.bashrc"
 FUNCTIONS_TO_ADD=$(cat << 'EOF'
 
 # Функция для вывода файлов с подсветкой синтаксиса с помощью pygmentize
-function catpyg() {
+function catppp() {
     for file in "$@"; do
         if [ -f "$file" ]; then
             pygmentize -g "$file" | cat
@@ -26,7 +26,7 @@ function catpyg() {
 }
 
 # Функция для просмотра файлов с подсветкой синтаксиса в less с помощью pygmentize
-function lesspyg() {
+function lessppp() {
     for file in "$@"; do
         if [ -f "$file" ]; then
             pygmentize -g "$file" | less -R
